@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Your Name] — Writing Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F3EA; --ink:#1E2E2C; --ink-soft:#5C6B63; --teal:#3A5A66; --sage:#6E7F52; --rule:rgba(30,46,44,0.14);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:"Work Sans", sans-serif; line-height:1.6; font-size:15.5px;}
+  .sheet{ max-width:640px; margin:0 auto; padding:56px 28px 48px; }
+
+  .eyebrow{ font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal); font-weight:600; }
+  h1{ font-family:"Fraunces", serif; font-weight:600; font-size:clamp(32px,6.6vw,46px); line-height:1.08; margin:12px 0 0; color:var(--ink); }
+  .tagline{ margin-top:14px; font-size:16.5px; color:var(--ink-soft); max-width:48ch; }
+
+  hr{ border:none; border-top:1px solid var(--rule); margin:32px 0; }
+  .label{ font-size:11.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); font-weight:600; margin-bottom:6px; display:block; }
+  .label-note{ font-size:12.5px; color:var(--ink-soft); margin:0 0 20px; }
+
+  /* clips */
+  .clip{ padding:18px 0; border-top:1px solid var(--rule); }
+  .clip:first-of-type{ border-top:none; }
+  .clip-top{ display:flex; justify-content:space-between; gap:12px; align-items:baseline; flex-wrap:wrap; }
+  .clip h3{ font-family:"Fraunces", serif; font-weight:600; font-size:18px; margin:0; }
+  .clip .tag{ font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:var(--sage); font-weight:600; white-space:nowrap; }
+  .clip .dek{ margin:5px 0 0; font-size:14.5px; color:var(--ink-soft); }
+  .clip .excerpt{ margin:10px 0 0; font-size:14.5px; color:var(--ink-soft); font-style:italic; }
+
+  details{ margin-top:12px; }
+  summary{
+    cursor:pointer;
+    font-size:12.5px;
+    font-weight:600;
+    color:var(--teal);
+    list-style:none;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+  }
+  summary::-webkit-details-marker{ display:none; }
+  summary::after{ content:"— read full piece"; }
+  details[open] summary::after{ content:"— close"; }
+  .full-text{
+    margin-top:14px;
+    padding:18px 20px;
+    background:#fff;
+    border:1px solid var(--rule);
+    border-radius:6px;
+    font-size:14.5px;
+    color:var(--ink);
+  }
+  .full-text .byline{
+    font-size:11.5px;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--ink-soft);
+    margin-bottom:12px;
+    font-weight:600;
+  }
+  .full-text p{ margin:0 0 12px; }
+  .full-text p:last-child{ margin-bottom:0; }
+
+  .chips{ display:flex; flex-wrap:wrap; gap:8px; }
+  .chip{ font-size:12px; padding:6px 13px; background:rgba(110,127,82,0.12); border-radius:5px; color:var(--sage); font-weight:500; }
+
+  .contact{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+  .email{ font-family:"Fraunces", serif; font-size:18px; text-decoration:none; color:var(--ink); border-bottom:2px solid var(--teal); }
+  .links{ font-size:12px; text-transform:uppercase; letter-spacing:0.04em; display:flex; gap:14px; font-weight:500; }
+  .links a{ color:var(--ink-soft); text-decoration:none; }
+
+  .footnote{ margin-top:34px; font-size:11.5px; color:var(--ink-soft); text-align:center; }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <span class="eyebrow">Writer · Editorial &amp; Copywriting</span>
+  <h1>[Your Name]</h1>
+  <p class="tagline">I write copy and content that reads calm, clear, and unmistakably human — from brand voice to reported features.</p>
+
+  <hr>
+
+  <span class="label">Writing Samples</span>
+  <p class="label-note">Three pieces, AP style — one brand voice, one reported feature, one personal essay.</p>
+
+  <!-- SAMPLE 1: BRAND COPY -->
+  <div class="clip">
+    <div class="clip-top">
+      <h3>Cheeni, Durham</h3>
+      <span class="tag">Brand &amp; Web Copy</span>
+    </div>
+    <p class="dek">About/web copy written for a homestyle Indian restaurant in downtown Durham, North Carolina.</p>
+    <p class="excerpt">"Cheeni started the way most good things do — with a home kitchen, a recipe box, and a mother and daughter who figured out the rest as they went."</p>
+    <details>
+      <summary>Read full piece</summary>
+      <div class="full-text">
+        <div class="byline">Web copy — About page</div>
+        <p>Cheeni started the way most good things do — with a home kitchen, a recipe box, and a mother and daughter who figured out the rest as they went.</p>
+        <p>Chef Preeti Waas never set out to open an Indian restaurant. She just liked to cook, and she liked to feed people. That instinct built Cheeni Indian Food Emporium in north Raleigh, then carried her to downtown Durham, where Cheeni now serves lunch, brunch and dinner on Corcoran Street — a bigger kitchen, a bigger table, the same instinct.</p>
+        <p>The menu draws on the regional dishes of Waas' childhood in India, reworked for a dining room that feels less like a restaurant and more like someone's very good kitchen. Her daughter, Amy, runs the floor and the bar next door at Bar Beej, keeping the whole operation a family one, top to bottom.</p>
+        <p>Three James Beard semifinalist nods later, the goal hasn't changed: feed people, and feed them well. Reservations recommended, walk-ins welcome, second helpings encouraged.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- SAMPLE 2: AP FEATURE -->
+  <div class="clip">
+    <div class="clip-top">
+      <h3>From Home Kitchen to Bull City Institution</h3>
+      <span class="tag">AP-Style Feature</span>
+    </div>
+    <p class="dek">A reported profile on chef Preeti Waas and Cheeni's move from a Raleigh counter-service cafe to a full Durham dining room.</p>
+    <p class="excerpt">Preeti Waas didn't plan to become a restaurateur. She planned to stop eating dinner alone.</p>
+    <details>
+      <summary>Read full piece</summary>
+      <div class="full-text">
+        <div class="byline">Feature — Food &amp; Culture</div>
+        <p>DURHAM, North Carolina — Preeti Waas didn't plan to become a restaurateur. She planned to stop eating dinner alone.</p>
+        <p>In 2011, Waas moved to North Carolina's Research Triangle Park with her husband and two daughters. By 2022, both daughters had left home, and Waas, facing an empty kitchen table, opened Cheeni Indian Food Emporium, a small counter-service cafe in north Raleigh built around the regional dishes she grew up eating in India — food she once doubted her own ability to cook.</p>
+        <p>The cafe found an audience quickly. The James Beard Foundation named Waas a semifinalist for Best Chef: Southeast in 2023, then again in 2024. By then, Cheeni had outgrown its original space.</p>
+        <p>Last year, on her birthday, Waas opened a second Cheeni in downtown Durham, inside a larger space on Corcoran Street with an open kitchen and room for a full sit-down menu — lunch, brunch and dinner, built around the same instinct that started the first location: cook what she knows, and feed whoever shows up.</p>
+        <p>The Durham location operates as more than a restaurant. Alongside dinner service, the kitchen doubles as a teaching space and community hub, hosting classes and collaborations. Next door, Bar Beej — a Bollywood-themed cocktail bar run by Waas' daughter, Amy — earned its own James Beard semifinalist nod for Best New Bar.</p>
+        <p>Three James Beard nods in, Waas said the recognition still catches her off guard. What hasn't changed is the reason she started cooking in the first place: to build a table people wanted to sit at.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- SAMPLE 3: PERSONAL ESSAY -->
+  <div class="clip">
+    <div class="clip-top">
+      <h3>What My Grandmother's Kitchen Taught Me About Words</h3>
+      <span class="tag">Personal Essay</span>
+    </div>
+    <p class="dek">A short reflective essay connecting a family recipe to the writer's approach to language.</p>
+    <p class="excerpt">My grandmother never measured anything. She cooked the way some people talk — by feel, correcting as she went, trusting that she'd know the right amount when she saw it.</p>
+    <details>
+      <summary>Read full piece</summary>
+      <div class="full-text">
+        <div class="byline">Personal Essay</div>
+        <p>My grandmother never measured anything. She cooked the way some people talk — by feel, correcting as she went, trusting that she'd know the right amount when she saw it. I spent years trying to pin her recipes down into something I could follow, writing "a pinch" and "until it looks right" into a notebook that made sense to no one but me.</p>
+        <p>It took me a long time to realize she'd already taught me how to write.</p>
+        <p>Good copy isn't measured out, either. You can follow every rule of grammar and structure and still end up with something nobody wants to read — over-salted with jargon, under-seasoned with anything a person would actually say out loud. The best sentences, like the best meals, are adjusted at the last minute. A word swapped because it sounds better in the mouth. A line cut because the dish doesn't need it.</p>
+        <p>I think about her kitchen every time I edit something down to its final draft — not because I'm looking for the poetry in it, but because she taught me the most useful lesson a writer can learn: trust the version that tastes right, even when you can't fully explain why.</p>
+        <p>These days, when a client asks me why I moved a sentence, or cut a paragraph that technically had good information in it, I still don't always have a tidy answer. I just know it reads better now. My grandmother would understand completely.</p>
+      </div>
+    </details>
+  </div>
+
+  <hr>
+
+  <span class="label">Skills</span>
+  <div class="chips">
+    <span class="chip">AP Style</span><span class="chip">Brand Voice</span><span class="chip">Web Copy</span><span class="chip">Feature Writing</span><span class="chip">Editing</span><span class="chip">[Add]</span>
+  </div>
+
+  <hr>
+
+  <div class="contact">
+    <a class="email" href="mailto:you@example.com">you@example.com</a>
+    <div class="links"><a href="#">LinkedIn</a><a href="#">Instagram</a><a href="#">Portfolio</a></div>
+  </div>
+
+  <p class="footnote">[Your Name] — Editorial &amp; Copywriting Portfolio · Durham, NC</p>
+
+</div>
+</body>
+</html>
