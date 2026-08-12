@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amy Waas — Editorial & Copywriting Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=EB+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  /* ---- Design tokens ----
+     Parchment: #F8F2E2  (lighter aged-paper background)
+     Ink:       #4A3324  (warm brown, replaces black for all body text)
+     Ink-soft:  #705B48  (lighter brown for secondary text)
+     Blue:      #1B4E82  (single accent — richer ink-blue, more saturated for presence)
+     Blue-dark: #113355  (hover/pressed state for the accent)
+     Blue-tint: #E4EDF5  (pale blue fill, used behind tags for more accent weight)
+     Line:      #DCCEA9  (hairline rule color, brown-tinted)
+     No card backgrounds, shadows, rotation, or tape/ribbon accents — sections are
+     divided by typography and hairline rules only.
+  */
+  :root{
+    --parchment:#F8F2E2;
+    --ink:#4A3324;
+    --ink-soft:#705B48;
+    --blue:#1B4E82;
+    --blue-dark:#113355;
+    --blue-tint:#E4EDF5;
+    --line:#DCCEA9;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    padding:64px 24px 96px;
+    background-color:var(--parchment);
+    color:var(--ink);
+    font-family:'Source Serif 4', Georgia, serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{ color:inherit; }
+  a:focus-visible, summary:focus-visible, details:focus-visible{
+    outline:2px solid var(--blue);
+    outline-offset:3px;
+  }
+
+  .sheet{
+    max-width:640px;
+    margin:0 auto;
+  }
+
+  /* Structural label voice — eyebrow, section labels, tags, bylines, chips —
+     all share one erudite small-caps serif so the "furniture" of the page
+     reads as a consistent, quiet system. */
+  .eyebrow, .label, .tag, .byline, .chip{
+    font-family:'EB Garamond', serif;
+    font-variant:small-caps;
+    font-weight:600;
+  }
+
+  .eyebrow{
+    display:block;
+    font-size:16px;
+    letter-spacing:0.06em;
+    color:var(--blue);
+  }
+
+  h1{
+    font-family:'Fraunces', serif;
+    font-optical-sizing:auto;
+    font-weight:600;
+    font-size:clamp(48px, 9vw, 68px);
+    line-height:0.95;
+    margin:6px 0 4px;
+    color:var(--ink);
+  }
+
+  .tagline{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:24px;
+    color:var(--ink-soft);
+    margin:0 0 32px;
+  }
+
+  hr{
+    border:none;
+    border-top:1px solid var(--line);
+    margin:32px 0;
+  }
+
+  .label{
+    display:block;
+    font-size:17px;
+    letter-spacing:0.03em;
+    color:var(--ink);
+  }
+
+  .label-note{
+    font-family:'Source Serif 4', serif;
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:15px;
+    margin:8px 0 36px;
+  }
+
+  /* Sections — no card, no shadow, no rotation, no tape. A hairline rule
+     above each one is the only division, in keeping with an unadorned,
+     manuscript-like layout. */
+  .clip{
+    padding:36px 0 8px;
+    border-top:1px solid var(--line);
+  }
+  .clip:first-of-type{ border-top:none; padding-top:0; }
+
+  .clip-top{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-bottom:6px;
+  }
+
+  h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:24px;
+    margin:0;
+    color:var(--ink);
+  }
+
+  .tag{
+    font-size:15px;
+    letter-spacing:0.02em;
+    color:var(--blue);
+    background:var(--blue-tint);
+    border:1px solid var(--blue);
+    border-radius:20px;
+    padding:2px 12px;
+    white-space:nowrap;
+  }
+  .tag em{ font-style:normal; }
+
+  .dek{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:600;
+    color:var(--ink-soft);
+    font-size:18px;
+    margin:6px 0 14px;
+  }
+
+  .excerpt{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:18px;
+    line-height:1.5;
+    color:var(--ink);
+    margin:0 0 6px;
+    padding-left:16px;
+    border-left:3px solid var(--blue);
+  }
+
+  details{ margin-top:8px; }
+  details > br{ display:none; }
+
+  summary{
+    cursor:pointer;
+    list-style:none;
+    font-family:'EB Garamond', serif;
+    font-variant:small-caps;
+    font-size:16px;
+    letter-spacing:0.03em;
+    color:var(--ink-soft);
+    font-weight:600;
+    padding:6px 0;
+    width:fit-content;
+  }
+  summary::-webkit-details-marker{ display:none; }
+  summary::before{
+    content:"+ ";
+    color:var(--blue);
+  }
+  details[open] summary::before{
+    content:"– ";
+  }
+  details[open] summary{
+    margin-bottom:6px;
+  }
+
+  .full-text{
+    padding-top:6px;
+    border-top:1px dashed var(--line);
+    margin-top:6px;
+  }
+
+  .byline{
+    font-size:14px;
+    letter-spacing:0.02em;
+    color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+
+  .full-text p{
+    margin:0 0 14px;
+    font-size:16px;
+    color:var(--ink);
+  }
+  .full-text p:last-child{ margin-bottom:0; }
+
+  .chips{
+    margin-top:14px;
+  }
+  .chip{
+    display:inline;
+    font-size:16px;
+    line-height:2.1;
+    color:var(--ink-soft);
+  }
+
+  .contact{
+    text-align:center;
+    margin-top:8px;
+  }
+  .email{
+    display:inline-block;
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:20px;
+    color:var(--blue);
+    text-decoration:none;
+    border-bottom:1px solid currentColor;
+    padding-bottom:2px;
+    margin-bottom:18px;
+  }
+  .email:hover{ color:var(--blue-dark); }
+
+  .links{ line-height:1.7; }
+
+  @media (max-width:480px){
+    body{ padding:40px 18px 72px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+  <span class="eyebrow">EDITORIAL. COPYWRITING. MARKETING. STORYTELLING.</span>
+  <h1>Amy Waas</h1>
+  <p class="tagline">I write to connect.</p>
+
+  <hr>
+  <span class="label">A Few Writing Samples</span>
+  <p class="label-note">I like AP style; here's one brand voice + marketing brief, one reported feature, and one personal essay from my most recent role.</p>
+
+  <!-- SAMPLE 1: BRAND COPY -->
+  <div class="clip">
+    <div class="clip-top">
+      <h3>About Cheeni, Durham</h3>
+      <span class="tag">Brand &amp; Marketing <em>Copy</em></span>
+    </div>
+    <p class="dek">About/web copy written for a homestyle, family-run Indian restaurant in Durham, North Carolina.</p>
+    <p class="excerpt">"At the end of the day, Preeti's goal is to feed people, and feed them well; it&rsquo;s all she&rsquo;s ever wanted to do."</p>
+    <details>
+      <summary>Read the full piece</summary>
+      <div class="full-text">
+        <div class="byline">Web copy &mdash; About page</div>
+        <p>First and foremost, Cheeni is a heartfelt endeavor. From tiny market stands to YMCA kiosks to a fast-casual cafe that turned heads and won Eater&rsquo;s &ldquo;Best New Restaurant,&rdquo; Cheeni has been an ever-evolving concept since 2017.</p>
+        <p>At the forefront is Preeti, the heart and soul of Cheeni. She is the story behind the space and the warm, maternal feeling that Cheeni is known for.</p>
+        <p>Her accomplishments are great, and nearly all of them took her by surprise. Three James Beard semifinalist nods, multiple local and statewide awards, press recognition and more, yet her objective has not wavered. At the end of the day, her goal is to feed people and feed them well; it&rsquo;s all she&rsquo;s ever wanted to do.</p>
+        <p>Now that she&rsquo;s the owner of two restaurants and two market concepts, Preeti finds the most peace and solitude when immersed in a good book, an excellent plate of food, or when surrounded by family &mdash; particularly her grand-dog, Moo.</p>
+        <p>Three James Beard semifinalist nods later, the goal hasn't changed: feed people, and feed them well. Reservations recommended, walk-ins welcome, second helpings encouraged.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- SAMPLE 2: AP FEATURE -->
+  <div class="clip">
+    <div class="clip-top">
+      <h3>From Home Kitchen to Bull City Institution</h3>
+      <span class="tag">AP-Style Feature</span>
+    </div>
+    <p class="dek">A reported profile on chef Preeti Waas and Cheeni's move from a Raleigh cafe to a full-service Durham dining room.</p>
+    <p class="excerpt">"Preeti Waas didn't plan to become a restaurateur. She planned to stop feeling alone."</p>
+    <details open>
+      <summary>Read the full piece</summary>
+      <div class="full-text">
+        <div class="byline">Feature &mdash; Food &amp; Culture</div>
+        <p>DURHAM, North Carolina &mdash; Preeti Waas didn't plan to become a restaurateur. She planned to stop feeling alone.</p>
+        <p>In 2011, Waas moved to North Carolina's Research Triangle Park with her husband and two daughters. By 2022, both daughters had left home, and Waas, facing an empty kitchen table, opened Cheeni Indian Food Emporium, a small counter-service cafe in Raleigh built around the regional dishes she grew up eating in India &mdash; food she once doubted her own ability to cook.</p>
+        <p>The cafe found an audience quickly. The James Beard Foundation named Waas a semifinalist for Best Chef: Southeast in 2023, then again in 2024 and once more in 2025. By then, Cheeni had outgrown its original space.</p>
+        <p>Last year, on her birthday, Waas opened a second Cheeni in downtown Durham, inside a larger space on Corcoran Street with an open kitchen and room for a full sit-down menu &mdash; lunch, brunch and dinner, built around the same instinct that started the first location: cook what she knows, and feed whoever shows up.</p>
+        <p>The Durham location operates as more than a restaurant. Alongside dinner service, the kitchen doubles as a teaching space and community hub, hosting classes and collaborations.</p>
+        <p>Three James Beard nods in, Waas said the recognition still catches her off guard. What hasn't changed is the reason she started cooking in the first place: to build a table where everyone had a seat, herself included.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- SAMPLE 3: PERSONAL ESSAY -->
+  <div class="clip">
+    <div class="clip-top">
+      <h3>What Mum's Kitchen Taught Me</h3>
+      <span class="tag">Personal Essay</span>
+    </div>
+    <p class="dek">A short reflective essay.</p>
+    <p class="excerpt">My mum has never measured anything. She cooks the way she interacts; by feel, correcting as she goes, trusting that she knows the right amount.</p>
+    <details open>
+      <summary>Read the full piece</summary>
+      <div class="full-text">
+        <div class="byline">Personal Essay</div>
+        <p>My mum has never measured anything. She cooks the way she interacts; by feel, correcting as she goes, trusting that she knows the right amount of every ingredient to add. I spent years trying to pin her recipes down into something I could follow, writing "a pinch" and "until it looks right" into a notebook that made sense to no one but me.</p>
+        <p>It took me a long time to realize she was teaching me more than cooking skills.</p>
+        <p>Good copy isn't measured out, either. You can follow every rule of grammar and structure and still end up with something nobody wants to read &mdash; over-salted with jargon, under-seasoned with anything a person would actually say out loud. Especially in a world consumed by artificial content, the authenticity of writing from individual thought, human heart, and lived experience is akin to the respite of a home-cooked meal. The best bits of copy, like the best meals, are adjusted at the last minute, meticulously adjusted. A word swapped because it sounds better in the mouth. An ingredient cut because the dish doesn't need it.</p>
+        <p>I think about her, her giant pots and infinite spices every time I edit something down to its final draft. It's not because I'm looking for something profound in it, but because she taught me the most useful lesson a writer can learn: trust the version that tastes right, even when you can't fully explain why. And be careful, intentional, thoughtful in what you produce. I just know that what I write reads better that way. My mum would understand completely.</p>
+      </div>
+    </details>
+  </div>
+
+  <hr>
+  <span class="label">My Writing Skills Include</span>
+  <div class="chips">
+    <span class="chip">Editorial Writing, Copywriting, Brand Voice Development, Op-Eds &amp; Features, Storytelling, Long &amp; Short Form Essays, Marketing (Email, Social Media, Media Pitching, Press Releases, Campaign &amp; Advertisement Copy), Research, AP, MLA, and Chicago Styles, SEO Optimization</span>
+  </div>
+
+  <hr>
+  <div class="contact">
+    <a class="email" href="mailto:amykwaas@gmail.com">amykwaas@gmail.com</a>
+    <div class="links"><span style="color:var(--ink-soft); font-size:11.5px;">AMY WAAS &mdash; Editorial &amp; Copywriting Portfolio &middot; raleigh - durham, nc</span></div>
+    <div class="links">&nbsp;</div>
+    <div class="links"><span style="font-size:11.5px;"><em>This portfolio was coded by me, using HTML, then refined using Claude AI. ALL WRITING SAMPLES WERE WRITTEN FROM SCRATCH.</em></span></div>
+  </div>
+</div>
+
+</body>
+</html>
